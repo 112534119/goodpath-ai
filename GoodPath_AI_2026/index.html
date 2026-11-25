@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#0d766d">
+    <meta name="description" content="善行導航 GoodPath AI — 三好四給的日常行動平台">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>善行導航 GoodPath AI｜三好四給智慧行動平台</title>
+</head>
+
+<body>
+    <div class="shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark">✦</div>
+                <div><strong>GoodPath <span>AI</span></strong><small>善行導航 · 三好四給</small></div>
+            </div>
+            <div class="side-label">探索平台</div>
+            <nav id="sideNav" aria-label="主要導覽"><button class="navitem active" data-page="dashboard">◫
+                    <span>首頁總覽</span></button><button class="navitem" data-page="discover">✧ <span>AI
+                        善行導航</span></button><button class="navitem" data-page="dialogue">☏
+                    <span>友善溝通練習</span></button><button class="navitem" data-page="account">♙
+                    <span>會員資料庫</span></button><button class="navitem" data-page="journal">▤
+                    <span>我的善行日誌</span></button><button class="navitem" data-page="impact">◉
+                    <span>成果與影響力</span></button><button class="navitem" data-page="about">ⓘ
+                    <span>關於作品與團隊</span></button></nav>
+            <div class="side-bottom">
+                <div class="status"><span class="status-dot"></span><span id="modeStatus">本機示範模式</span></div>
+                <p>每一份善意，都值得被看見。</p>
+            </div>
+        </aside>
+        <div class="workspace">
+            <header class="topbar">
+                <div class="topbar-inner">
+                    <div class="crumb">2026 三好 AI 創新應用競賽 <b>／ 大專組 B 類</b></div>
+                    <div class="top-actions"><span class="pill">🌱 GoodPath 3.1</span><button class="icon-btn"
+                            id="helpBtn" title="操作指引">?</button></div>
+                </div>
+            </header>
+            <main class="content">
+                <section id="dashboard" class="page">
+                    <div class="hero">
+                        <div class="hero-copy"><span class="eyebrow">DO GOOD · SPEAK KINDLY · THINK GOOD</span>
+                            <h1>讓善意，<br>從想法走進生活。</h1>
+                            <p>不必等到有很多時間、金錢或資源。從一件適合自己的小事開始，讓 AI 協助你找到日常實踐三好四給的路徑。</p>
+                            <div class="buttons"><button class="btn white" data-go="discover">探索我的善行任務
+                                    <span>→</span></button><button class="btn ghost-light"
+                                    data-go="dialogue">練習友善說話</button></div>
+                        </div>
+                        <div class="hero-visual" aria-hidden="true">
+                            <div class="orbit orbit1"></div>
+                            <div class="orbit orbit2"></div>
+                            <div class="heart">♥</div><span class="bubble b1">給人希望 ✨</span><span class="bubble b2">做好事
+                                🤝</span><span class="bubble b3">存好心 🌱</span>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-icon mint">✓</div>
+                            <div><small>已完成善行</small><strong id="homeDone">0 <em>件</em></strong></div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-icon blue">◎</div>
+                            <div><small>累積善行積分</small><strong id="homePoints">0 <em>點</em></strong></div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-icon amber">◷</div>
+                            <div><small>進行中任務</small><strong id="homePending">0 <em>件</em></strong></div>
+                        </div>
+                    </div>
+                    <div class="section-head">
+                        <div><span class="eyebrow dark">OUR VALUES</span>
+                            <h2>三好四給，從每一天開始</h2>
+                        </div>
+                    </div>
+                    <div class="value-grid">
+                        <div class="value-card"><span class="value-icon">🤝</span>
+                            <h3>做好事</h3>
+                            <p>以具體行動協助他人，從小小善舉累積正向改變。</p>
+                        </div>
+                        <div class="value-card"><span class="value-icon">💬</span>
+                            <h3>說好話</h3>
+                            <p>學習同理與非暴力溝通，讓對話少一點傷害。</p>
+                        </div>
+                        <div class="value-card"><span class="value-icon">💚</span>
+                            <h3>存好心</h3>
+                            <p>練習理解、尊重與善意，從自己內心開始。</p>
+                        </div>
+                        <div class="value-card"><span class="value-icon">🎁</span>
+                            <h3>四給精神</h3>
+                            <p>給人信心、給人歡喜、給人希望、給人方便。</p>
+                        </div>
+                    </div>
+                    <div class="callout">
+                        <div><b>今天的一小步，也是世界的一份溫柔。</b>
+                            <p>先完成一個 5 分鐘善行，開始你的善行旅程。</p>
+                        </div><button class="btn primary" data-go="discover">開始體驗 →</button>
+                    </div>
+                </section>
+                <section id="discover" class="page hide">
+                    <div class="page-title"><span class="eyebrow dark">SMART ACTION MATCHING</span>
+                        <h1>AI 善行導航</h1>
+                        <p>告訴我們你的時間、興趣和行動方式，探索適合實踐的善行任務。</p>
+                    </div>
+                    <div class="two-col">
+                        <div class="card form-card">
+                            <div class="card-head">
+                                <h2>01 / 設定你的善行偏好</h2><span class="tiny">約 30 秒</span>
+                            </div><label for="time">我有多少時間？</label><select id="time">
+                                <option value="5">5 分鐘 · 輕量行動</option>
+                                <option value="15" selected>15 分鐘 · 日常善意</option>
+                                <option value="30">30 分鐘 · 深入協助</option>
+                                <option value="60">60 分鐘 · 完整參與</option>
+                            </select><label for="interest">最在意的主題</label><select id="interest">
+                                <option value="all">都想嘗試</option>
+                                <option value="care">🤝 關懷與陪伴</option>
+                                <option value="digital">📱 數位共融</option>
+                                <option value="environment">🌿 環境友善</option>
+                                <option value="kindness">💬 友善溝通</option>
+                            </select><label for="mode">最方便的行動方式</label><select id="mode">
+                                <option value="all">都可以</option>
+                                <option value="home">🏠 在家 / 線上</option>
+                                <option value="outside">🚶 校園 / 社區</option>
+                            </select><label for="context">目前的情境（選填）</label><textarea id="context" rows="3"
+                                maxlength="300" placeholder="例：今天放學後有空，希望幫忙不擅長用手機的長輩。請避免填寫姓名、地址等個資。"></textarea><label
+                                class="check-line"><input type="checkbox" id="cloudConsent"><span>同意將上述偏好與情境傳給 AI
+                                    服務（若已設定後端）；不勾選仍可使用本機推薦。</span></label><button class="btn primary block"
+                                id="recommendBtn">✧ 產生我的善行提案</button>
+                            <p class="hint" id="recommendMode">本機智慧推薦可直接使用；生成式 AI 需另行設定伺服器。</p>
+                        </div>
+                        <div class="card result-card">
+                            <div class="card-head">
+                                <h2>02 / 專屬善行提案</h2><span class="soft-badge" id="recommendBadge">等待推薦</span>
+                            </div>
+                            <div id="recommendResults">
+                                <div class="empty-state">
+                                    <div class="empty-art">✦</div>
+                                    <h3>為你的善意找到方向</h3>
+                                    <p>填寫左側偏好，按下產生推薦，就能得到可執行的善行任務與具體步驟。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="dialogue" class="page hide">
+                    <div class="page-title"><span class="eyebrow dark">KIND COMMUNICATION STUDIO</span>
+                        <h1>友善溝通練習室</h1>
+                        <p>同樣的想法，換一種表達方式，可能讓人更願意傾聽。</p>
+                    </div>
+                    <div class="two-col">
+                        <div class="card form-card">
+                            <div class="card-head">
+                                <h2>01 / 說出你的真實想法</h2><span class="tiny">練習說好話</span>
+                            </div><label for="speechInput">你原本想說的話</label><textarea id="speechInput" rows="7"
+                                maxlength="500" placeholder="例：你每次都遲到，真的很煩！"></textarea>
+                            <div class="chips"><button class="chip" data-example="你每次都遲到，真的很煩！">朋友遲到</button><button
+                                    class="chip" data-example="你什麼都不會，別來拖累我們。">團隊合作</button><button class="chip"
+                                    data-example="你講話真的很吵，閉嘴好嗎？">溝通衝突</button></div><label class="check-line"><input
+                                    type="checkbox" id="speechConsent"><span>同意把輸入的句子交給已設定的 AI
+                                    服務分析（不勾選使用本機範例）。</span></label><button class="btn primary block" id="rewriteBtn">✧
+                                分析並產生友善說法</button>
+                            <p class="hint">請勿輸入個人敏感資料；此工具不進行情緒或人格診斷。</p>
+                        </div>
+                        <div class="card result-card">
+                            <div class="card-head">
+                                <h2>02 / 讓表達更有溫度</h2><span class="soft-badge" id="speechBadge">等待練習</span>
+                            </div>
+                            <div id="speechResults">
+                                <div class="empty-state">
+                                    <div class="empty-art">♡</div>
+                                    <h3>友善，不代表壓抑自己</h3>
+                                    <p>練習說清楚自己的感受、需要和請求，同時尊重彼此。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="account" class="page hide">
+                    <div class="page-title"><span class="eyebrow dark">SECURE STORAGE</span>
+                        <h1>會員與資料庫同步</h1>
+                        <p>使用伺服器端 SQLite 儲存善行日誌。請勿使用日常重要密碼，展示時請用測試帳號。</p>
+                    </div>
+                    <div class="card">
+                        <h2>會員資料庫</h2>
+                        <p id="accountStatus">未登入：目前使用瀏覽器本機紀錄。</p>
+                        <div class="account-fields"><label>帳號（3–32 位英文／數字）<input id="accountName"
+                                    autocomplete="username" maxlength="32"
+                                    placeholder="例如 goodpath_demo"></label><label>密碼（至少 8 位）<input id="accountPassword"
+                                    type="password" autocomplete="current-password" placeholder="至少 8 位"></label></div>
+                        <div class="buttons"><button class="btn primary" id="loginBtn">登入</button><button
+                                class="btn secondary" id="registerBtn">建立帳號</button><button class="btn secondary"
+                                id="logoutBtn">登出</button></div>
+                        <hr>
+                        <h3>資料同步</h3>
+                        <p class="hint">登入後日誌修改即存入資料庫。載入伺服器紀錄前，建議先備份本機紀錄；不同裝置可用相同帳號登入。</p>
+                        <div class="buttons"><button class="btn secondary"
+                                id="loadCloudBtn">載入資料庫紀錄（覆蓋畫面）</button><button class="btn secondary"
+                                id="uploadCloudBtn">將目前紀錄上傳資料庫</button></div>
+                        <p class="hint" id="syncStatus"></p>
+                    </div>
+                </section>
+                <section id="journal" class="page hide">
+                    <div class="page-title"><span class="eyebrow dark">MY GOOD DEEDS</span>
+                        <h1>我的善行日誌</h1>
+                        <p>善行從選擇任務開始，完成之後記錄真實發生的故事。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>我正在進行的任務</h2><span class="soft-badge" id="journalCount">0 件</span>
+                        </div>
+                        <div id="taskList"></div>
+                    </div>
+                </section>
+                <section id="impact" class="page hide">
+                    <div class="page-title"><span class="eyebrow dark">PERSONAL IMPACT DASHBOARD</span>
+                        <h1>善行成果與影響力</h1>
+                        <p>將善意化為看得見的紀錄，回顧自己的成長軌跡。</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-icon mint">✓</div>
+                            <div><small>已完成任務</small><strong id="impactDone">0 <em>件</em></strong></div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-icon blue">◎</div>
+                            <div><small>善行積分</small><strong id="impactPoints">0 <em>點</em></strong></div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-icon amber">%</div>
+                            <div><small>個人完成率</small><strong id="impactRate">0%</strong></div>
+                        </div>
+                    </div>
+                    <div class="two-col equal">
+                        <div class="card">
+                            <h2>任務完成進度</h2>
+                            <div class="progress-track">
+                                <div id="progressBar"></div>
+                            </div>
+                            <p class="hint" id="progressCopy">尚未加入任務</p>
+                            <h3>不同主題的參與次數</h3>
+                            <div id="categoryBars"></div>
+                        </div>
+                        <div class="card">
+                            <h2>我的三好實踐軌跡</h2>
+                            <div id="history" class="history"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>匯出與資料管理</h2>
+                        </div>
+                        <p class="hint">積分與完成率僅代表自我回報的參與情形，不等於公益時數、第三方驗證或真實社會影響量。</p>
+                        <div class="buttons"><button class="btn primary" id="exportCsv">匯出善行 CSV</button><button
+                                class="btn secondary" id="exportJson">備份 JSON</button><button class="btn secondary"
+                                id="importBtn">匯入備份</button><button class="btn danger" id="clearBtn">清除紀錄</button></div>
+                        <input type="file" id="importFile" accept="application/json,.json" hidden>
+                    </div>
+                </section>
+                <section id="about" class="page hide">
+                    <div class="page-title"><span class="eyebrow dark">THE PROJECT & TEAM</span>
+                        <h1>用科技，讓善意更容易實踐</h1>
+                        <p>2026 三好 AI 創新應用競賽｜大專組 AI 數位應用實作類</p>
+                    </div>
+                    <div class="card">
+                        <h2>作品簡介</h2>
+                        <p>GoodPath
+                            AI（善行導航）以「做好事、說好話、存好心」及「給人信心、給人歡喜、給人希望、給人方便」為核心，透過善行媒合、友善溝通練習、任務管理及成果紀錄，協助使用者將善念轉換成日常可執行的行動。
+                        </p>
+                        <div class="value-grid about-values">
+                            <div class="mini"><b>需要被解決的問題</b>
+                                <p>想幫助他人，卻不知道從哪件小事做起。</p>
+                            </div>
+                            <div class="mini"><b>AI 的應用</b>
+                                <p>依個人情境生成行動建議，並協助改寫衝突語句。</p>
+                            </div>
+                            <div class="mini"><b>人本設計</b>
+                                <p>行動由使用者自主選擇，完成與否由使用者回報。</p>
+                            </div>
+                            <div class="mini"><b>社會價值</b>
+                                <p>降低參與公益與友善互動的門檻。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>參賽團隊</h2>
+                        <div class="team-grid">
+                            <div class="member">
+                                <div>楊</div><strong>楊恩愷</strong><small>團隊成員</small>
+                            </div>
+                            <div class="member">
+                                <div>黃</div><strong>黃婕庭</strong><small>團隊成員</small>
+                            </div>
+                            <div class="member">
+                                <div>林</div><strong>林韋辰</strong><small>團隊成員</small>
+                            </div>
+                            <div class="member">
+                                <div>黃</div><strong>黃聖翔</strong><small>團隊成員</small>
+                            </div>
+                        </div>
+                        <p class="hint">以上為已提供的組員姓名；職務分工尚待團隊確認。</p>
+                    </div>
+                    <div class="card">
+                        <h2>AI 使用與資料透明聲明</h2>
+                        <p><b>本機模式：</b>使用人工設計的任務資料庫、條件排序與用語規則，非生成式 AI，不會上傳輸入內容。</p>
+                        <p><b>AI 模式：</b>伺服器環境設定 API 金鑰後，經使用者明確勾選同意，才將相關文字及偏好送至後端，再由 AI
+                            模型生成任務建議或溝通示範。回傳內容由程式驗證與顯示來源模式，不保證每項建議都適用。</p>
+                        <p><b>資料存放：</b>未登入時善行紀錄存於本機瀏覽器；登入後可同步至伺服器 SQLite 資料庫。本系統不提供位置追蹤或真實公益組織串接；請勿將示範任務當作已核實的志工服務機會。
+                        </p>
+                        <p><b>成果驗證：</b>使用者自行回報完成狀態；作品不宣稱獲得實際 NGO 認證或量化社會效益。</p>
+                        <div class="notice">參賽前請補充：實際 AI 模型名稱、API 供應商、生成內容的人工審核及素材來源與權利確認；並實地測試 API 串接。</div>
+                    </div>
+                </section>
+            </main>
+            <footer>GoodPath AI © 2026 · 三好四給 × AI 數位應用 · 楊恩愷／黃婕庭／林韋辰／黃聖翔</footer>
+        </div>
+    </div>
+    <div class="toast" role="status" id="toast" aria-live="polite"></div>
+    <dialog id="helpDialog">
+        <h2>如何體驗善行導航？</h2>
+        <p>① 至「AI 善行導航」設定偏好並取得推薦。② 將想實踐的任務加入日誌。③ 完成後記錄心得。④ 在「成果與影響力」查看紀錄或匯出。也可以到「友善溝通練習室」試試說話改寫。</p>
+        <p>離線開啟 HTML 可使用本機示範功能；正式生成式 AI 需要依 README 啟動後端並設定自己的 API 金鑰。</p>
+        <form method="dialog"><button class="btn primary">知道了</button></form>
+    </dialog>
+    <script src="assets/app.js" defer></script>
+</body>
+
+</html>
